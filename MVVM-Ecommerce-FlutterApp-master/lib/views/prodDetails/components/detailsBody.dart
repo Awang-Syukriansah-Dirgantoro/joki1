@@ -193,7 +193,7 @@ class _BodyState extends State<Body> {
       }
     } else {
       setState(() {
-        stateTextWithIcon = ButtonState.ExtraState1;
+        stateTextWithIcon = ButtonState.idle; // Default ExtraState1
       });
       Future.delayed(Duration(milliseconds: 1500), () {
         if (!mounted) return;
@@ -232,7 +232,8 @@ class _BodyState extends State<Body> {
                 color: Colors.white,
               ),
               color: PrimaryColor),
-          ButtonState.ExtraState1: IconedButton(
+          ButtonState.idle: IconedButton(
+              // Default ExtraState1
               text: "Connection Lost",
               icon: Icon(
                 Icons.cancel,
