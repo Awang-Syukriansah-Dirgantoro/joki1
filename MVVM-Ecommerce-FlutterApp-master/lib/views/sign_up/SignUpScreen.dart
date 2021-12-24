@@ -192,7 +192,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       });
     } else {
       setState(() {
-        _stateTextWithIcon = ButtonState.ExtraState1;
+        _stateTextWithIcon = ButtonState.idle;
       });
       Future.delayed(Duration(milliseconds: 1600), () {
         if (!mounted) return;
@@ -234,7 +234,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 color: Colors.white,
               ),
               color: PrimaryColor),
-          ButtonState.ExtraState1: IconedButton(
+          ButtonState.idle: IconedButton(
               text: "Connection Lost",
               icon: Icon(
                 Icons.cancel,

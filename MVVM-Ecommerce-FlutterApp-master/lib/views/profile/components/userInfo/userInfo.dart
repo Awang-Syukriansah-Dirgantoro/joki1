@@ -192,7 +192,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
           } catch (e) {
             print(e);
             setState(() {
-              _stateTextWithIcon = ButtonState.ExtraState1;
+              _stateTextWithIcon = ButtonState.idle;
             });
             Future.delayed(Duration(milliseconds: 1600), () {
               setState(() {});
@@ -211,7 +211,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
       });
     } else {
       setState(() {
-        _stateTextWithIcon = ButtonState.ExtraState1;
+        _stateTextWithIcon = ButtonState.idle;
       });
       Future.delayed(Duration(milliseconds: 1600), () {
         if (!mounted) return;
@@ -253,7 +253,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                 color: Colors.white,
               ),
               color: Colors.green.shade400),
-          ButtonState.ExtraState1: IconedButton(
+          ButtonState.idle: IconedButton(
               text: "Connection Lost",
               icon: Icon(
                 Icons.cancel,
