@@ -112,7 +112,7 @@ class _ResetPassBottomSheetState extends State<ResetPassBottomSheet> {
           } catch (e) {
             print(e);
             setState(() {
-              _stateTextWithIcon = ButtonState.idle;
+              _stateTextWithIcon = ButtonState.idle; // Default ExtraState1
             });
             Future.delayed(Duration(milliseconds: 1600), () {
               setState(() {
@@ -122,7 +122,7 @@ class _ResetPassBottomSheetState extends State<ResetPassBottomSheet> {
           }
         } else {
           setState(() {
-            _stateTextWithIcon = ButtonState.idle;
+            _stateTextWithIcon = ButtonState.idle; // Default ExtraState1
           });
           Future.delayed(Duration(milliseconds: 1600), () {
             setState(() {
@@ -177,6 +177,7 @@ class _ResetPassBottomSheetState extends State<ResetPassBottomSheet> {
               ),
               color: Colors.green.shade400),
           ButtonState.idle: IconedButton(
+              // Default ExtraState1
               text: "Invalid Input",
               icon: Icon(
                 Icons.cancel,

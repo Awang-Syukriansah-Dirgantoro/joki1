@@ -62,7 +62,7 @@ class _checkoutBottomSheetState extends State<checkoutBottomSheet> {
           } else {
             print("Choose payment method");
             setState(() {
-              stateTextWithIcon = ButtonState.idle;
+              stateTextWithIcon = ButtonState.idle; // Default ExtraState1
             });
             Future.delayed(Duration(milliseconds: 2000), () {
               setState(() {
@@ -126,6 +126,7 @@ class _checkoutBottomSheetState extends State<checkoutBottomSheet> {
               ),
               color: Colors.green.shade400),
           ButtonState.idle: IconedButton(
+              // Default ExtraState1
               text: "Choose payment method",
               icon: Icon(
                 Icons.cancel,
