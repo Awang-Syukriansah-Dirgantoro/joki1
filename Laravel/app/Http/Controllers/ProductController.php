@@ -20,6 +20,7 @@ class ProductController extends Controller
             'name' => ['required', 'unique:products,name', 'max:255'],
             'category_id' => ['required', 'numeric'],
             'price' => ['required'],
+            'image' => ['required', 'image']
         ]);
 
         Product::create($data);
@@ -37,6 +38,7 @@ class ProductController extends Controller
             'name' => ['required', Rule::unique('products', 'name')->ignore($product)],
             'price' => ['required'],
             'category_id' => ['required', 'numeric'],
+            'image' => ['nullable', 'image'],
         ]);
 
         $product->update($data);

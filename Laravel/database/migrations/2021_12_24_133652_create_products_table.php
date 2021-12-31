@@ -13,6 +13,7 @@ class CreateProductsTable extends Migration
             $table->string('name')->unique();
             $table->foreignId('category_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->integer('price');
+            $table->string('image');
             $table->timestamps();
         });
     }

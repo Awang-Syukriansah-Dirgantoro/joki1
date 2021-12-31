@@ -11,6 +11,7 @@ class ProductFactory extends Factory
         return [
             'name' => $this->faker->unique()->word(),
             'price' => $this->faker->numberBetween(1000, 20000),
+            'image' => $this->faker->imageUrl(),
         ];
     }
 }

@@ -13,9 +13,12 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
+        $categories = ['tshirt', 'hoodie', 'jacket', 'jeans', 'sneaker'];
+        foreach($categories as $category) {
+            Category::create(['name' => $category]);
+        }
         User::factory(5)->create();
         $user = User::factory()->create(['name' => 'test']);
-        Category::factory(4)->create();
         $order = Order::factory()->for($user)->create();
         $products = Product::factory(3)->for(Category::factory())->create();
         foreach ($products as $product) {
