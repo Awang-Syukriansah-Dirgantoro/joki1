@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:ecommerce_app/utils/constants.dart';
+import 'package:baru/utils/constants.dart';
+import 'package:provider/provider.dart';
 import 'package:titled_navigation_bar/titled_navigation_bar.dart';
 import 'components/body.dart';
 import '../../utils/size_config.dart';
-import 'package:ecommerce_app/views/favourites/Favs_screen.dart';
-import 'package:ecommerce_app/views/cart/cart_screen.dart';
-import 'package:ecommerce_app/views/profile/profile_screen.dart';
-import 'package:ecommerce_app/view_models/globalVariables_viewModel.dart';
-import 'package:provider/provider.dart';
+// import 'package:baru/views/favourites/Favs_screen.dart';
+import 'package:baru/views/cart/cart_screen.dart';
+import 'package:baru/views/profile/profile_screen.dart';
+import 'package:baru/view_models/globalVariables_viewModel.dart';
 
 class HomeScreen extends StatefulWidget {
   static String routeName = "/home";
@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     _pageList.add(HomeBody());
-    _pageList.add(FavScreen());
+    // _pageList.add(FavScreen());
     _pageList.add(CartScreen());
     _pageList.add(ProfileScreen());
     super.initState();
@@ -48,12 +48,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     icon: Icon(Icons.home_outlined),
                     title: Text("Home",
                         style: TextStyle(fontFamily: "PantonBold"))),
-                TitledNavigationBarItem(
-                    icon: Icon(Icons.favorite_border_outlined),
-                    title: Text("Favourites",
-                        style: TextStyle(
-                            fontSize: getProportionateScreenWidth(13),
-                            fontFamily: "PantonBold"))),
                 TitledNavigationBarItem(
                     icon: Icon(Icons.shopping_cart_outlined),
                     title: Text("Cart",
